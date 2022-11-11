@@ -1,0 +1,213 @@
+:root {
+    --background-grey: #f0f0f0;
+    --btn-basket: #2acc1f linear-gradient(180deg, #4ad441, #2acc1f) repeat-x;
+    --btn-basket-border: #36df2b;
+    --btn-shadow: 0 0.1rem 0.27rem rgb(0 0 0 / 10%);
+    --available: #1abc9c;
+    --notavailable: #dc3545;
+    --preorder: #ffcc40;
+    --border-footer: #f0f0f0;
+    --sale: #dc3545;
+    --free-shipping: #4fb34f;
+    --new: #1abc9c;
+
+}
+
+
+body {
+    background-color: var(--background-grey) ;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    line-height: 1.55;
+}
+
+.card-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+}
+
+.card {
+    display: flex;
+    flex-flow: column;
+    background-color: white;
+    max-width: 270px;
+    padding: 2em;
+    margin: 0;
+    border: 1px solid #f0f0f0
+}
+
+.card__header {
+    font-weight: 400;
+    margin-bottom: 0.33334em
+}
+
+.card-lables {
+    display: block;
+    justify-content: left;
+    margin-top: calc((1em - 1.3334em) * 1.6);
+    margin-bottom: 0.66667em;
+    font-size: 0.9375rem;
+    gap: 0.5em;
+
+}
+
+.card-lables__badge {
+    font-family: "Rajdhani", sans-serif;
+    font-size: 0.875em;
+    font-weight: 400;
+    line-height: 1.45;
+    text-align: center;
+    display: inline-block;
+    letter-spacing: 0;
+    white-space: nowrap;
+    border-radius: 0.375rem;
+    margin-bottom: 0.33334em
+}
+
+.card-lables__badge--info {
+    border-color: #fbfbfb;
+    background-color: #f0f0f0;
+    color: black;
+    padding: 0.41rem 0.8rem;
+}
+
+.card-lables__badge--free-shipping {
+    background-color: var(--free-shipping);
+    color: white;
+    padding: 0.27em 0.676em;
+}
+
+.card-lables__badge--sale {
+    background-color: var(--sale);
+    color: white;
+    padding: 0.27em 0.676em;
+}
+
+.card-lables__badge--new {
+    background-color: var(--new);
+    color: white;
+    padding: 0.27em 0.676em;
+}
+
+.card-status {
+    font-size: 0.9375rem;
+}
+
+.card-status__availability--yes {
+    color: var(--available);
+}
+
+.card-status__availability--no {
+    color: var(--notavailable);
+}
+
+.card-status__availability--preorder {
+    color: var(--preorder);
+}
+
+.card-footer__description {
+    border-top: 1px solid var(--border-footer);
+    color: rgba(0, 0, 0, 0.6);
+    margin-top: 0.66667em;
+    padding-top: 0.66667em
+}
+
+.card-footer {
+    margin-top: 0.66667em;
+    margin-bottom: auto;
+    font-size: 0.875em;
+}
+
+.card-price__now {
+    white-space: nowrap;
+    font-size: 1.125em;
+    font-weight: 700;
+}
+
+.card-price {
+    display: block;
+}
+
+.card-price__common {
+    color: rgba(0, 0, 0, 0.6);
+    margin-left: 0.33334rem;
+    text-decoration: line-through;
+    font-size: 0.875em;
+}
+
+.card-price__vatfree {
+    color: rgba(0, 0, 0, 0.6);
+    white-space: nowrap;
+}
+
+.card-price__vatfree small {
+    font-size: smaller;
+    font-weight: 400;
+    letter-spacing: 0;
+    white-space: nowrap;
+}
+
+.card-buttons {
+    text-align: left;
+    justify-content: left;
+    margin-top: 0.66667em;
+    display: flex;
+}
+
+.card-buttons__button {
+    font-weight: 400;
+    line-height: 1.5;
+    border-width: 0;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    white-space: nowrap;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.375rem;
+    user-select: none;
+}
+
+.card-buttons__button--compare {
+    order: 1;
+    margin-right: 0.33334rem;
+}
+
+.card-buttons__button--basket {
+    box-shadow: var(--btn-shadow);
+    border-color: var(--btn-basket-border);
+    color: white;
+    background: var(--btn-basket);
+    padding: 0.66667em 1.3334em;
+}
+
+.card-buttons__button__text {
+    margin-left: 0.62501em;
+}
+
+.card-buttons__icon {
+    min-width: 2.9em;
+    height: 2.9em;
+    min-height: 2.9em;
+    line-height: 2.9em;
+    padding: 0;
+}
+
+.card-buttons__button--favor {
+    margin-left: 0.33334rem;
+}
+
+.card-buttons__button--basket:hover {
+    background: #2bb322;
+}
+
+.card-product-photo {
+    display: block;
+}
+
+.card-product-photo__img {
+    max-width: 100%;
+    object-fit: cover;
+}
